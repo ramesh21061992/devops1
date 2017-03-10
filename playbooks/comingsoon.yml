@@ -1,0 +1,12 @@
+- hosts: 192.168.1.16
+  gather_facts: true
+  tasks :
+     - name: installing httpd on redhat 
+       package: name=httpd state=present 
+       when: ansible_os_family == "RedHat"
+     - name: installing apache on ubuntu
+       package: name=apache2 state=present
+       when: ansible_os_family == "Debian"
+
+
+

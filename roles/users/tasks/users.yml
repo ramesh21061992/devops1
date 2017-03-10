@@ -1,0 +1,5 @@
+- group: name=devops state=present
+- user: name={{items}} state=present groups=devops
+ with_items:
+       - ram
+       - ram1

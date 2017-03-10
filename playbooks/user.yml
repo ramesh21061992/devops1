@@ -1,0 +1,5 @@
+--
+- group: name=devops state=present
+- user: name=ram state=present
+
+
